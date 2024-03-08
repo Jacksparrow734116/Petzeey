@@ -1,0 +1,585 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h3{
+  padding: 0;
+  margin: 0;
+}
+.App {
+ 
+  text-align: center;
+ width: 90%;
+ height: 83vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 40px 40px 40px;
+  
+  align-items: center;
+}
+.dashboard-files, .newAppointment, .review-page{
+  background-color: #EAECF0;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  max-height: 100vh;
+}
+.dashboard-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+  align-items: center;
+
+}
+#welcome{
+ font-size: small;
+ color: gray;
+}
+.form-group{
+  text-align: left;
+}
+.form-group input{
+  border-radius: 4px;
+  width: 300px;
+  padding: 8px 5px;
+  border: 1px solid lightgray;
+  margin: 8px 0;
+}
+.form-rem{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 20px 0;
+}
+.form-rem label,a{
+  font-size: 12px;
+}
+.form-rem label{
+  margin-left: 5px;
+}
+.form-rem a{
+  text-decoration: none;
+  color: orangered;
+}
+.checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-buttons button{
+  padding: 8px 2px;
+  border-radius: 4px;
+}
+.form-buttons button:first-child{
+  background-color: orangered;
+  color: white;
+  border: none;
+  width: 100%;
+}
+.form-buttons button:nth-child(2){
+  background-color: white;
+  border: 1px solid lightgray;
+}
+.form-warning{
+  width: 100%;
+display: flex;
+font-size: small;
+align-items: center;
+justify-content: center;
+}
+.form-warning a{
+  color: orangered;
+  text-decoration: none;
+  margin-left: 3px;
+}
+input:focus{
+  outline: none;
+}
+.img-logo{
+ width: 100px;
+}
+.Web-Container{
+  width: 60%;
+  height: 100%;
+ 
+}
+.web-image {
+  position: relative;
+ width: 80%;
+ display: inline-block;
+ height: 90%;
+}
+.web-title-logo img{
+  position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-52%);
+ width: 78%;
+  height: 30%;
+}
+.vertical-line{
+  content: "";
+  height: 80%;
+  display: block;
+  border-left: 2px solid lightgrey;
+ 
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.web-pet-img{
+  opacity: 34%;
+  width: 100%;
+  height: 100%;
+}
+.profile{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+ z-index: -1;
+}
+.profile-info{
+  display: flex;
+  justify-content: flex-end;
+}
+.sidebar{
+  background-color: #18385C;
+  width: 15%;
+  height:100vh;
+ overflow: hidden;
+  z-index: 2;
+}
+.sidebar-logo{
+  width: 80px;
+  height: 80px;
+  color: white;
+}
+.sidebar-menu{
+  margin: 30px 18px;
+  padding: 7px 7px 7px 10px;
+  width: 93%;
+ background-color: white;
+ border-radius: 8px;
+}
+.sidebar-menu a{
+  color: #18385C;
+}
+#sidebar-menu-items{
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+ 
+  
+}
+.dashboard, .consultation,.review-comps{
+  width: 80%;
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  float: right;
+
+}
+.dashboard{
+  height: calc(100vh - 100px); /* Adjust the height as needed */
+  overflow-y: auto;
+  margin-left: 50px;
+}
+.consultation, .review-comps{
+  width: 80%;
+  margin-left: 40px;
+  margin-right: 40px;
+  overflow: auto;
+}
+.review-comps{
+  width: 70%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.appointment-filters{
+  display: flex;
+  gap: 15px;
+}
+#hori{
+  margin-left: 40px;
+  width: 92%;
+  margin-top: 20px;
+  color: lightgray;
+}
+
+.display-Appointments{
+  margin: 40px;
+}
+.allAppointments{
+  color:#101828;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.status select,option{
+  height: 30px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+.doctor-name option,select{
+  height: 30px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+.new-appointment button{
+  height: 30px;
+  padding: 0 5px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.select-dates button{
+  padding: 0 5px;
+ height: 30px;
+background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.appointment{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.appointment-card{
+ overflow: auto;
+  width:300px;
+
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.appointment-details{
+  display: flex;
+  justify-content: space-between;
+ margin-left: 50px;
+ margin-right: 50px;
+ margin-top: 10px;
+
+ min-height: 30px;
+
+}
+.appointment-details a{
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+.appointment-date-time p:first-child{
+  font-weight: 600;
+  font-size: 21px;
+}
+.appointment-date-time p:nth-child(2){
+  font-size: 14px;
+  color: gray;
+  font-weight: 600;
+}
+.appointment-options{
+  margin-left: 70px;
+  display: flex;
+  color: orangered;
+  gap: 30px;
+  
+}
+.pet-info, .appointment-timings{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.appoint{
+  box-sizing: border-box;
+  margin: 20px;
+}
+.pet-info img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.pet p:first-child{
+  font-size: 20px;
+  font-weight: 600;
+}
+.pet p:nth-child(2), .pet p:nth-child(3){
+  font-size: 14px;
+  color: gray;
+font-weight: 600;
+}
+.pet p:nth-child(2){
+  margin-bottom: 20px;
+}
+.time-buttons{
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.time-buttons button{
+  width: 60px;
+  height: 38px;
+  border-radius: 3px;
+  border: none;
+}
+.vetern{
+  margin-top: 50px;
+}
+.vetern select,option{
+  width: 200px;
+}
+.vetern-det, .vetern-sel{
+margin-bottom: 20px;
+}
+.vetern-det{
+  font-weight: 600;
+  font-size: 20px;
+}
+.vetern-sel{
+  font-size: 14px;
+  font-weight: 600;
+}
+.pat-vet{
+  display: flex;
+ gap:150px
+}
+.pat-info{
+  width: 300px;
+}
+.pat-info-1 input, .pat-info-2 input{
+  border: none;
+  background-color: lightgray;
+}
+.pat-info-1 label, .pat-info-2 label{
+  font-size: 14px;
+}
+.patient-det, .other-det{
+  font-size: 20px;
+  font-weight: 600;
+}
+.backto{
+  text-decoration: none;
+  color: black;
+}
+
+.newappoint-buttons button:first-child, .newappoint-buttons button:nth-child(2){
+padding: 7px 7px;
+border-radius: 3px;
+border: none;
+margin-right: 20px;
+}
+.newappoint-buttons button:nth-child(2){
+  background-color: orangered;
+  color: white;
+}
+.review-pet-det, .review-patient-doc--det{
+  display:flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+.review-patient-doc--det{
+
+  height: 300px;
+}
+.backtoappoint{
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+.review-pet-id{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.review-time{
+  display: flex;
+}
+.review-time p{
+  font-size: 16px;
+  font-weight: 600;
+  color: gray;
+   margin-right: 16px;
+}
+.review-pet-issues, .reason-for-visit, .review-pat-name,.review-own-name,.review-own-mailid,.review-own-contact,.review-own-add,.review-pat-gen,.review-pat-age,.review-pat-own-det,.review-doc-info,.review-doc-contact-details,.review-icons-2{
+  display: flex;
+}
+
+.review-pet-issues p, .reason-for-visit p, .review-confirm p{
+  font-size: 14px;
+  font-weight: 600;
+margin-right: 16px ;
+}
+.review-pet-issues p:nth-child(2), .reason-for-visit p:nth-child(2), .review-confirm p{
+ color: gray;
+}
+.review-options{
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  
+}
+.review-options button, .icons{
+margin-right: 16px;
+padding: 4px 9px;
+}
+
+.closeAppoint{
+  background-color: orangered;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.cancel-but, .edit-but{
+  background-color: white;
+  border: 1px solid lightgray;
+}
+.icons{
+  color: orangered;
+}
+.review-pat-own-det{
+    height: 200px;
+    padding: 20px 15px;
+  width: 52%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow:  0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.review-doc-det{
+  width: 37%;
+  height: 200px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  padding:20px 15px ;
+}
+.review-pat-name img , .review-own-name img,.review-doc-info img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.review-pat-name-det p:first-child, .review-pat-name-det p:nth-child(3){
+font-size: 14px;
+font-weight: 600;
+color: gray;
+}
+.review-pat-name-det p:nth-child(2){
+  font-size: 20px;
+font-weight: 600;
+}
+.review-pat-gen p , .review-pat-age p{
+  font-size: 14px;
+  margin-bottom: 6px;
+font-weight: 600;
+}
+.review-pat-gen p:first-child , .review-pat-age p:first-child{
+color: gray;
+width: 60px;
+}
+.review-pat-gender{
+  margin-top: 20px;
+}
+.review-pat-det{
+  margin-right: 40px;
+}
+.review-own-name-det{
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.review-own-name-det p:first-child{
+  color: gray;
+  font-size: 14px;
+  font-weight: 600;
+}
+.review-own-name-det p:nth-child(2){
+  font-size: 20px;
+  font-weight: 600;
+}
+.review-own-mail{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-icons {
+  margin-right: 16px;
+}
+.review-own-mailid p{
+ font-family: 14px;
+ color: gray;
+font-weight: 600;
+}
+.review-doc-info{
+  margin-bottom: 20px;
+}
+.review-doc-name-det{
+  margin-top: 15px;
+ 
+}
+.review-doc-name-det p:first-child{
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+}
+.review-doc-name-det p:nth-child(2){
+  font-size: 20px;
+  font-weight: 600;
+}
+.review-doc-hos-det p, .review-icons-2 p{
+font-size: 14px;
+font-weight: 600;
+color: gray;
+margin-bottom: 16px;
+}
+.review-doc-hos-det{
+  margin-right: 15px;
+  width: 200px;
+}
+.cancel-dialog{
+  background-color: white;
+  border: 1px solid gray;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
